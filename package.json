@@ -1,0 +1,39 @@
+{
+  "name": "pi-supabase",
+  "version": "0.1.0",
+  "description": "Pi package that bundles the official Supabase MCP server, Supabase agent skills, a destructive-write hook, diagnostics script, and Supabase workflows for local, hosted, and CI use.",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "pi-package",
+    "pi",
+    "supabase",
+    "postgres",
+    "database",
+    "backend",
+    "mcp",
+    "auth",
+    "storage",
+    "realtime",
+    "edge-functions",
+    "migrations",
+    "rls"
+  ],
+  "scripts": {
+    "check": "bun run scripts/check-setup.ts"
+  },
+  "pi": {
+    "extensions": [
+      "./extensions/supabase.ts"
+    ],
+    "skills": [
+      "./skills"
+    ],
+    "prompts": [
+      "./prompts/*.md"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  }
+}
